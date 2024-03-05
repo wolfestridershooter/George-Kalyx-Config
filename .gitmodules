@@ -1,0 +1,3 @@
+[submodule "kalyx"]
+	path = kalyx
+	url = https://github.com/Juiced-Devs/Kalyx
