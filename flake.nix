@@ -9,8 +9,7 @@
     };
 
     kalyx = {
-      url = "file:./kalyx?submodules=1";
-      type = "git";
+      url = "github:Juiced-Devs/Kalyx";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };

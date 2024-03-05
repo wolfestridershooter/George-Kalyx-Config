@@ -28,16 +28,17 @@
         ]
       },
       "locked": {
-        "dirtyRev": "7ee32178e61689e4e352262d6e8f5e4b767600d5-dirty",
-        "dirtyShortRev": "7ee3217-dirty",
-        "lastModified": 1709021353,
-        "narHash": "sha256-b3sRUgSc5xivgO0g0O1/1j/GwuceLTBQWCDAWeOLA9M=",
-        "type": "git",
-        "url": "file:./kalyx?submodules=1"
+        "lastModified": 1709602902,
+        "narHash": "sha256-PldRV73QGPqN1k3BrvjSfrFHIu2n/uJMQJPIvPtEWtY=",
+        "owner": "Juiced-Devs",
+        "repo": "Kalyx",
+        "rev": "3d663ac9a385b96ed9e368bede1fad2b9ee90acd",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:./kalyx?submodules=1"
+        "owner": "Juiced-Devs",
+        "repo": "Kalyx",
+        "type": "github"
       }
     },
     "nixpkgs": {

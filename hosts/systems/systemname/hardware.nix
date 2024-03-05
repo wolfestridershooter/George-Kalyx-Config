@@ -6,7 +6,14 @@
   imports = [ ];
 
   kalyx = {
-    nvidia.enable = true;
+    # GPU Options
+    intelgpu.enable = lib.mkDefault false;
+    amdgpu.enable = lib.mkDefault false;
+    nvidia.enable = lib.mkDefault false;  
+
+    # CPU Options
+    intel.enable = lib.mkDefault false;
+    amd.enable = lib.mkDefault false;
   };
 
   boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "sd_mod" "sr_mod" ];
