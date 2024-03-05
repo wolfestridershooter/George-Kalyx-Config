@@ -16,6 +16,7 @@
   };
 
   outputs = inputs: with inputs;
+  ########################### Backend System Configuration Code ###########################
   let
     specialArgs = { inherit inputs self; };
     system = "x86_64-linux";
@@ -76,7 +77,9 @@
       };
     });
   in
+  ######################## END OF Backend System Configuration Code ########################
   {
+    # Configure your system here, replace instances of 'username' and 'systemname' with your desired user name(s) and system name(s).
     homeConfigurations = {
       "username@systemname" = mkHome "username" "systemname";
     };
