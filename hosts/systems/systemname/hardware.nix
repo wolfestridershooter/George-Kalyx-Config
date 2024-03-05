@@ -9,12 +9,16 @@
     # GPU Options
     intelgpu.enable = lib.mkDefault false;
     amdgpu.enable = lib.mkDefault false;
-    nvidia.enable = lib.mkDefault false;  
+    nvidia.enable = lib.mkDefault false;
 
     # CPU Options
     intel.enable = lib.mkDefault false;
     amd.enable = lib.mkDefault false;
+
+    # Networking Options
+    broadcom.enable = lib.mkDefault true;
   };
 
-  # Drop options of hardware-configuration.nix here:
+  # V Drop options of hardware-configuration.nix here V:
+  
 }
