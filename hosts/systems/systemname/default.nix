@@ -9,60 +9,11 @@
   ];
   
   # Setup Kalyx functionality.
-  kalyx = {
-    # Authentication toolkit setup for kalyx using gnome keyring and gnupg.
-    authentication = {
-      enable = true;
-    };
-    # Enable sound with pipewire or pulse.
-    sound = {
-      enable = true;
-      soundServer = "pipewire"; # This can be 'pipewire' (default) or 'pulse'.
-    };                          # NOTE: Pipewire can be enabled seperetly without audio using 'kalyx.pipewire.enable = true';
-    
-    branding.enable = true; # Enable the Kalyx branding.
-  };
-
-  # TODO: Port to Kalyx module
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "America/Los_Angeles";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
-  # services.xserver.enable = true;
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  kalyx = { };
 
   environment.systemPackages = with pkgs; [
     firefox
   ];
-
-  programs.git.enable = true;
-  security.rtkit.enable = true;
-
-  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
