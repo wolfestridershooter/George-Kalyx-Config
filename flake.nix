@@ -73,6 +73,8 @@
           enable = true;
           configs = [ 
             (./homes/. + builtins.toPath "/${usrname}/${sysname}.nix")
+            (./homes/. + builtins.toPath "/${usrname}/shared.nix")
+            ./homes/universal.nix
           ]
           ++ (kalyx.kalyxlib.collectModules ./modules/home)
           ++ kalyx.homeModulePaths;
@@ -88,9 +90,9 @@
     };
 
     nixosConfigurations = let
-      username = mkUser "username" [ "wheel" "dialout" "networkmanager" ] true;
+      username = mkUser "username" [ "wheel" "dialout" "networkmanager" kalyx.adminGroups ] false;
     in {
-      systemname = mkNixos "x86_64-linux" "systemname" [ "pc" ] [ (username "systemname") ];
+      "systemname" = mkNixos "x86_64-linux" "systemname" [ "pc" ] [ (username "systemname") ];
     };
   };
 }
