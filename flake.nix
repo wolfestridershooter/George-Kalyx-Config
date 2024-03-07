@@ -31,6 +31,7 @@
         kalyx.nixosModules
       ] 
       ++ (map (x: ./hosts/roles/. + builtins.toPath ("/" + x + ".nix")) roles)
+      ++ (kalyx.kalyxlib.collectModules ./modules/nixos)
       ++ extraModules;
     };
 
@@ -46,7 +47,7 @@
       ];
       modules = [
         kalyx.homeManagerModules
-      ];
+      ] ++ (kalyx.kalyxlib.collectModules ./modules/home);
     };
 
     mkUser = usrname: groups: disablesudopassword: ( sysname: {
@@ -72,7 +73,9 @@
           enable = true;
           configs = [ 
             (./homes/. + builtins.toPath "/${usrname}/${sysname}.nix")
-          ] ++ kalyx.homeModulePaths;
+          ]
+          ++ (kalyx.kalyxlib.collectModules ./modules/home)
+          ++ kalyx.homeModulePaths;
         };
       };
     });
