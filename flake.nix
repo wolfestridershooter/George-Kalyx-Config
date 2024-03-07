@@ -90,7 +90,7 @@
     };
 
     nixosConfigurations = let
-      username = mkUser "username" [ "wheel" "dialout" "networkmanager" kalyx.adminGroups ] false;
+      username = mkUser "username" ([ "wheel" "dialout" "networkmanager" ] ++ kalyx.adminGroups) false;
     in {
       "systemname" = mkNixos "x86_64-linux" "systemname" [ "pc" ] [ (username "systemname") ];
     };
