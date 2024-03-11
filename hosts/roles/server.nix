@@ -8,12 +8,6 @@
   
   # Setup Kalyx functionality.
   kalyx = {
-    # Enable sound with pipewire or pulse.
-    sound = {
-      enable = true;
-      soundServer = "pipewire"; # This can be 'pipewire' (default) or 'pulse'.
-    };                          # NOTE: Pipewire can be enabled seperetly without audio using 'kalyx.pipewire.enable = true';
-    
     branding.enable = true; # Enable the Kalyx branding.
   };
 
