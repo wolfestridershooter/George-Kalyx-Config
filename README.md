@@ -1,3 +1,4 @@
+
 <a name="readme-top"></a>
 
 <br />
@@ -34,5 +35,5 @@ For people using and developing main Kalyx, you can use a git submodule to nest 
 1. Clone the repo
 2. Add your fork to the submodules, make sure it gets clones into kalyx and make sure to change the url in the provided command: ``git submodule add https://github.com/Your/KalyxFork kalyx``
 3. Near the top of the flake.nix change ``url = "https://github.com/Juiced-Devs/Kalyx";`` to ``url = "file:./kalyx?submodules=1";`` and below that line add ``type = "git";``
-4. Delete flake.lock
+4. Run ``nix flake update``, (Do this after changing something in the kalyx folder).
 5. Follow regular setup.
