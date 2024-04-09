@@ -4,8 +4,5 @@
 
   programs.kitty.enable = true;
 
-  kalyx = {
-    vscode.enable = true;
-    neofetch.enable = true;
-  };
+  kalyx = { };
 }

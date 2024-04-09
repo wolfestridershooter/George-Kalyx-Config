@@ -1,5 +1,59 @@
 {
   "nodes": {
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1712014858,
+        "narHash": "sha256-sB4SWl2lX95bExY2gMFG5HIzvva5AVMJd4Igm+GpZNw=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "9126214d0a59633752a136528f5f3b9aa8565b7d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_2": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_2"
+      },
+      "locked": {
+        "lastModified": 1712014858,
+        "narHash": "sha256-sB4SWl2lX95bExY2gMFG5HIzvva5AVMJd4Igm+GpZNw=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "9126214d0a59633752a136528f5f3b9aa8565b7d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_3": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_3"
+      },
+      "locked": {
+        "lastModified": 1712014858,
+        "narHash": "sha256-sB4SWl2lX95bExY2gMFG5HIzvva5AVMJd4Igm+GpZNw=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "9126214d0a59633752a136528f5f3b9aa8565b7d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -23,22 +77,37 @@
     },
     "kalyx": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "flake-parts": "flake-parts_2"
       },
       "locked": {
-        "lastModified": 1709808361,
-        "narHash": "sha256-EPoUfVTRYJ7Yz9HmLVLYd8oen67afondQjCTbVWjw/o=",
-        "owner": "Juiced-Devs",
-        "repo": "Kalyx",
-        "rev": "0635414f0639457274878a286ba7a83796009058",
-        "type": "github"
+        "dirtyRev": "bfa8536d8aa03b5111aee02db36597678d2785d0-dirty",
+        "dirtyShortRev": "bfa8536-dirty",
+        "lastModified": 1711619868,
+        "narHash": "sha256-C4SkYKwytWEl2GCTHqrBCdnyZEZXnG85OKFQW7iCx1A=",
+        "type": "git",
+        "url": "file:./kalyx?submodules=1"
       },
       "original": {
-        "owner": "Juiced-Devs",
-        "repo": "Kalyx",
-        "type": "github"
+        "type": "git",
+        "url": "file:./kalyx?submodules=1"
+      }
+    },
+    "kyler": {
+      "inputs": {
+        "flake-parts": "flake-parts_3"
+      },
+      "locked": {
+        "lastModified": 1711022080,
+        "narHash": "sha256-JRweO2Lm/4er72cgTxCTALtScF6AinlvQmfwQl/qf0U=",
+        "ref": "refs/heads/main",
+        "rev": "4c5ceba666c668bbc540d62e4fd31a815249e4e0",
+        "revCount": 7,
+        "type": "git",
+        "url": "file:./kyler?submodules=1"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:./kyler?submodules=1"
       }
     },
     "nixpkgs": {
@@ -57,10 +126,66 @@
         "type": "github"
       }
     },
+    "nixpkgs-lib": {
+      "locked": {
+        "dir": "lib",
+        "lastModified": 1711703276,
+        "narHash": "sha256-iMUFArF0WCatKK6RzfUJknjem0H9m4KgorO/p3Dopkk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d8fe5e6c92d0d190646fb9f1056741a229980089",
+        "type": "github"
+      },
+      "original": {
+        "dir": "lib",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_2": {
+      "locked": {
+        "dir": "lib",
+        "lastModified": 1711703276,
+        "narHash": "sha256-iMUFArF0WCatKK6RzfUJknjem0H9m4KgorO/p3Dopkk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d8fe5e6c92d0d190646fb9f1056741a229980089",
+        "type": "github"
+      },
+      "original": {
+        "dir": "lib",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_3": {
+      "locked": {
+        "dir": "lib",
+        "lastModified": 1711703276,
+        "narHash": "sha256-iMUFArF0WCatKK6RzfUJknjem0H9m4KgorO/p3Dopkk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d8fe5e6c92d0d190646fb9f1056741a229980089",
+        "type": "github"
+      },
+      "original": {
+        "dir": "lib",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "kalyx": "kalyx",
+        "kyler": "kyler",
         "nixpkgs": "nixpkgs"
       }
     }

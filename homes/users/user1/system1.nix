@@ -1,19 +1,17 @@
-{pkgs, lib, ...}: 
-{
+{pkgs, lib, ...}: let 
+  modKey = "ALT";
+in {
   home.stateVersion = "23.11";
 
-  programs.kitty.enable = true;
+  programs.git = {
+    enable = true;
+    # userName = "user1";
+    # userEmail = "user1@example.com";
+  };
 
   kalyx = {
-    neofetch.enable = true;
-
     hyprland = rec { # Kalyx provides an enable option, so we should use that instead of wayland.windowManager.hyprland.enable, as we usally want the kalyx expansions and compatibility.
       enable = true;
-      terminalEmulator = "kitty";
-      modKey = "ALT"; # We have a modkey here, regardless of the fact we don't set binds through kalyx.
-                      # Kalyx has it's own bindings it may need to build, so we must tell it which 
-                      # modkey to default to when creating custom binds, like screenshare! This may change.
-
       mappedBinds = { # Kalyx offeres a convenient way to set hyprland binds that follow a user defined mapping.
                       # For example, we can create workspace bindings by mapping the number keys to their respective workspace numbers,
                       # or we can set window bindings by mapping the arrow keys to their respective directions.
@@ -59,15 +57,14 @@
     };
   };
 
+  kalyx.tofi.bind = "${modKey},r";
+
   # The Kalyx module and the standard module work in tandem.
-  # Any configuration options Kalyx provides ontop of modules
-  # should generally, exclusively be done through Kalyx.
+  # However, any configuration options Kalyx provides ontop of modules
+  # should, generally, exclusively be done through Kalyx.
   ###############################
-  wayland.windowManager.hyprland.settings = let 
-    modKey = "ALT";
-  in 
-  {
-    bind = [ # Kalyx doesn't provide a bindings setting as of current, so we use the default module.
+  wayland.windowManager.hyprland.settings = {
+    bind = [ # Kalyx doesn't provide a bindings setting, so we use the default module.
       "${modKey},RETURN,exec,${pkgs.kitty}/bin/kitty"
       "${modKey},C,killactive"
       "${modKey},SPACE,togglefloating"
