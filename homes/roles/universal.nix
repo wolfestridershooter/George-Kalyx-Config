@@ -7,5 +7,4 @@
   xdg.mimeApps.enable = true; # Enable support for default apps. 
   
   kalyx = { };
-  
 }

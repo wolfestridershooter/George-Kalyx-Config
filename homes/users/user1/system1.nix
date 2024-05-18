@@ -1,18 +1,17 @@
-{pkgs, lib, ...}:
-let 
+{pkgs, lib, ...}: let 
   modKey = "ALT";
-in 
-{
+in {
   home.stateVersion = "23.11";
 
-  programs.kitty.enable = true;
+  programs.git = {
+    enable = true;
+    # userName = "user1";
+    # userEmail = "user1@example.com";
+  };
 
   kalyx = {
-    neofetch.enable = true;
-
-    hyprland = { # Kalyx provides an enable option, so we should use that instead of wayland.windowManager.hyprland.enable, as we usally want the kalyx expansions and compatibility.
+    hyprland = rec { # Kalyx provides an enable option, so we should use that instead of wayland.windowManager.hyprland.enable, as we usally want the kalyx expansions and compatibility.
       enable = true;
-
       mappedBinds = { # Kalyx offeres a convenient way to set hyprland binds that follow a user defined mapping.
                       # For example, we can create workspace bindings by mapping the number keys to their respective workspace numbers,
                       # or we can set window bindings by mapping the arrow keys to their respective directions.
@@ -58,12 +57,14 @@ in
     };
   };
 
+  kalyx.tofi.bind = "${modKey},r";
+
   # The Kalyx module and the standard module work in tandem.
-  # Any configuration options Kalyx provides ontop of modules
-  # should generally, exclusively be done through Kalyx.
+  # However, any configuration options Kalyx provides ontop of modules
+  # should, generally, exclusively be done through Kalyx.
   ###############################
   wayland.windowManager.hyprland.settings = {
-    bind = [ # Kalyx doesn't provide a bindings setting as of current, so we use the default module.
+    bind = [ # Kalyx doesn't provide a bindings setting, so we use the default module.
       "${modKey},RETURN,exec,${pkgs.kitty}/bin/kitty"
       "${modKey},C,killactive"
       "${modKey},SPACE,togglefloating"
