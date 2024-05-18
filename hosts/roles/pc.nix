@@ -9,9 +9,6 @@
   # Setup Kalyx functionality.
   kalyx = { };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
   # Set a kernel! Comment this out to get the regular Linux LTS kernel.
   boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_zen; 
 

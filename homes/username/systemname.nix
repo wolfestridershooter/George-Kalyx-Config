@@ -1,4 +1,7 @@
-{pkgs, lib, ...}: 
+{pkgs, lib, ...}:
+let 
+  modKey = "ALT";
+in 
 {
   home.stateVersion = "23.11";
 
@@ -7,12 +10,8 @@
   kalyx = {
     neofetch.enable = true;
 
-    hyprland = rec { # Kalyx provides an enable option, so we should use that instead of wayland.windowManager.hyprland.enable, as we usally want the kalyx expansions and compatibility.
+    hyprland = { # Kalyx provides an enable option, so we should use that instead of wayland.windowManager.hyprland.enable, as we usally want the kalyx expansions and compatibility.
       enable = true;
-      terminalEmulator = "kitty";
-      modKey = "ALT"; # We have a modkey here, regardless of the fact we don't set binds through kalyx.
-                      # Kalyx has it's own bindings it may need to build, so we must tell it which 
-                      # modkey to default to when creating custom binds, like screenshare! This may change.
 
       mappedBinds = { # Kalyx offeres a convenient way to set hyprland binds that follow a user defined mapping.
                       # For example, we can create workspace bindings by mapping the number keys to their respective workspace numbers,
@@ -63,10 +62,7 @@
   # Any configuration options Kalyx provides ontop of modules
   # should generally, exclusively be done through Kalyx.
   ###############################
-  wayland.windowManager.hyprland.settings = let 
-    modKey = "ALT";
-  in 
-  {
+  wayland.windowManager.hyprland.settings = {
     bind = [ # Kalyx doesn't provide a bindings setting as of current, so we use the default module.
       "${modKey},RETURN,exec,${pkgs.kitty}/bin/kitty"
       "${modKey},C,killactive"

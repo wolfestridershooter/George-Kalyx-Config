@@ -12,7 +12,9 @@
     authentication = {
       enable = true;
     };
-    
+
+    printing.enable = true;
+
     branding.enable = true; # Enable the Kalyx branding.
   };
 
@@ -44,9 +46,6 @@
     layout = "us";
     xkbVariant = "";
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Set a kernel! Comment this out to get the regular Linux LTS kernel.
   boot.kernelPackages = pkgs.linuxPackages_zen; 
