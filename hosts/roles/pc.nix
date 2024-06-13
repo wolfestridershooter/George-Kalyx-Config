@@ -10,8 +10,8 @@
   kalyx = { };
 
   # Enable SDDM.
-  services.xserver.displayManager.sddm.enable = lib.mkDefault true;
-  services.xserver.displayManager.sddm.wayland.enable = lib.mkDefault true;
+  services.displayManager.sddm.enable = lib.mkDefault true;
+  services.displayManager.sddm.wayland.enable = lib.mkDefault true;
 
   # Set a kernel! Comment this out to get the regular Linux LTS kernel.
   boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_zen; 

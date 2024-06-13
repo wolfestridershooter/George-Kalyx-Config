@@ -47,8 +47,10 @@
 
   # services.xserver.enable = true;
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
   };
 
   # Set a kernel! Comment this out to get the regular Linux LTS kernel.
