@@ -48,4 +48,5 @@
                                                                # Delete this if your existing config you are about to paste already has this option set as it may cause an error.
 
   # V Drop options of hardware-configuration.nix here V:
+
 }

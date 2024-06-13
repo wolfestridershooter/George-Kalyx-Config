@@ -1,8 +1,6 @@
 {pkgs, lib, ...}: let 
   modKey = "ALT";
 in {
-  home.stateVersion = "23.11";
-
   programs.git = {
     enable = true;
     # userName = "user1";

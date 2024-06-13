@@ -52,7 +52,7 @@
             configuration = ./hosts/systems/system1;
             roles = [ ./hosts/roles/universal.nix ./hosts/roles/pc.nix ];
             hardware = ./hosts/systems/system1/hardware.nix;
-            stateVersion = "23.11";
+            stateVersion = "24.05";
             hostPlatform = "x86_64-linux";
             users = {
               user1 = {

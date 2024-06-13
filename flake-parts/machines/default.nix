@@ -12,7 +12,7 @@ let
       options = {
         stateVersion = mkOption {
           type = types.str;
-          default = "23.11";
+          default = "24.05";
         };
         groups = mkOption {
           type = types.listOf types.str;
@@ -36,7 +36,7 @@ let
     options = {
       stateVersion = mkOption {
         type = types.str;
-        default = "23.11";
+        default = "24.05";
       };
 
       nixosModules = mkOption {
