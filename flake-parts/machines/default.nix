@@ -124,6 +124,7 @@ in
         {networking.hostName = hostname;}
         {system.stateVersion = machine.stateVersion;}
         {nixpkgs.hostPlatform = lib.mkIf (machine.hostPlatform != null) machine.hostPlatform;}
+        ./overlays.nix
       ] 
       ++ machine.nixosModules
       ++ machine.roles
