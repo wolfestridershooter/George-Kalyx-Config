@@ -1,10 +1,10 @@
 {pkgs, lib, ...}: let 
-  modKey = "ALT";
+  modKey = "CTRL_SHIFT";
 in {
   programs.git = {
     enable = true;
-    # userName = "user1";
-    # userEmail = "user1@example.com";
+    userName = "george";
+    userEmail = "gewolf205140@yahoo.com";
   };
 
   kalyx = {
@@ -64,7 +64,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [ # Kalyx doesn't provide a bindings setting, so we use the default module.
       "${modKey},RETURN,exec,${pkgs.kitty}/bin/kitty"
-      "${modKey},C,killactive"
+      "${modKey},X,killactive"
       "${modKey},SPACE,togglefloating"
       "${modKey},M,exit"
       "${modKey},F,fullscreen"

@@ -4,6 +4,11 @@
 {
   nixpkgs.config.allowUnfree = true;
 
+  services.openssh = {
+    enable = true;
+    ports = [ 27069 ];
+  };
+
   imports = [
     ./hardware.nix
   ];

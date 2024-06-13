@@ -3,10 +3,22 @@
   programs.kitty.enable = true;
 
   kalyx = {
+    thunar.enable = true;
+    file-roller = {
+      enable = true;
+      default = true;  
+    };
+    imv.enable = true;
     vscode.enable = true;
     neofetch.enable = true;
     tofi.enable = true;
+    discord.enable = true;
   };
+
+  home.packages = with pkgs; [
+    keepassxc
+    authenticator
+  ];
 
   kyler = {
     autoEnable = true; # Enable Kyler theming, feel free to rip this out as it isn't needed for base Kalyx functionality.

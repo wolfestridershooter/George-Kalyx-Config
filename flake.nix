@@ -46,19 +46,19 @@
         systems = [ "x86_64-linux" ];
 
         machines = {
-          system1 = {
+          citadel-core = {
             nixosModules = [ kalyx.nixosModules.default ];
             homeManagerModules = [ kalyx.homeManagerModules.default kyler.homeManagerModules.default ];
-            configuration = ./hosts/systems/system1;
+            configuration = ./hosts/systems/citadel-core;
             roles = [ ./hosts/roles/universal.nix ./hosts/roles/pc.nix ];
-            hardware = ./hosts/systems/system1/hardware.nix;
+            hardware = ./hosts/systems/citadel-core/hardware.nix;
             stateVersion = "24.05";
             hostPlatform = "x86_64-linux";
             users = {
-              user1 = {
+              george = {
                 groups = [ "networkmanager" "wheel" "dialout" ] ++ kalyx.universalGroups ++ kalyx.adminGroups;
                 noSudoPassword = false; # Set this to true if you dont want sudo to prompt you for a password.
-                configuration = ./homes/users/user1/system1.nix;
+                configuration = ./homes/users/george/citadel-core.nix;
                 roles = [ ./homes/roles/universal.nix ./homes/roles/pc.nix ];
               };
             };
