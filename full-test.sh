@@ -7,5 +7,5 @@ fi
 
 git clone https://github.com/kyleraykbs/kyler
 git clone https://github.com/Juiced-Devs/kalyx
-nix flake update
+nix flake update --extra-experimental-features "nix-command flakes"
 ./build.sh -o build -s citadel-core
