@@ -13,7 +13,7 @@
       enable = true;
     };
 
-    printing.enable = true;
+    printing.enable = false;
 
     branding.enable = true; # Enable the Kalyx branding.
   };
