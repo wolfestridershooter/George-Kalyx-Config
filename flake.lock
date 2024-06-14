@@ -80,11 +80,11 @@
         "flake-parts": "flake-parts_2"
       },
       "locked": {
-        "lastModified": 1718229671,
-        "narHash": "sha256-NW67Ay1oVvtHD4+3QMyJCmm1APJU0jvjJXSFgkFgHFw=",
+        "lastModified": 1718344788,
+        "narHash": "sha256-ogS3Vooa9pERzxMqiyueKzgMuMI/FhS8hPwqw8Ju1cA=",
         "ref": "refs/heads/main",
-        "rev": "909f4b61598b29a3765b33c770b53060e0385e5f",
-        "revCount": 53,
+        "rev": "e9039e471fc5310b745b8398f14bd10d51ad651b",
+        "revCount": 54,
         "type": "git",
         "url": "file:./kalyx?submodules=1"
       },
@@ -181,11 +181,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1718310343,
-        "narHash": "sha256-jD2XqvofA5hdROv8OSTss/vjJi164Mjavgh2yJf2ej4=",
+        "lastModified": 1718343604,
+        "narHash": "sha256-RcDCVKrw+AUHHkxBf/fetMOWECKVovV6RMKnXRZ7zBM=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "ca312c14ad9abbb8736b9f9fd6fa8b8f60b2f1b2",
+        "rev": "0cd060f561047f4639639b0c21934312aff06de6",
         "type": "github"
       },
       "original": {
