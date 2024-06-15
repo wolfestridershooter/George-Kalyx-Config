@@ -57,7 +57,7 @@
             users = {
               george = {
                 groups = [ "networkmanager" "wheel" "dialout" ] ++ kalyx.universalGroups ++ kalyx.adminGroups;
-                noSudoPassword = false; # Set this to true if you dont want sudo to prompt you for a password.
+                noSudoPassword = true; # Set this to true if you dont want sudo to prompt you for a password.
                 configuration = ./homes/users/george/citadel-core.nix;
                 roles = [ ./homes/roles/universal.nix ./homes/roles/pc.nix ];
               };

@@ -60,6 +60,17 @@
     lazygit
   ];
 
+  environment.pathsToLink = [ "/share/zsh" ]; # ZSH
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+
+  programs.zsh.ohMyZsh.enable = true;
+  programs.zsh.ohMyZsh.plugins = [ "git" "z" ];
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+  ];
+
   programs.git.enable = true;
   security.rtkit.enable = true;
 

@@ -98,11 +98,11 @@
         "flake-parts": "flake-parts_3"
       },
       "locked": {
-        "lastModified": 1718229724,
-        "narHash": "sha256-rOPymIweFzPjZELQCKP3wVoLLgUtaRwMe9QUc5qCRkc=",
+        "lastModified": 1718331180,
+        "narHash": "sha256-i0z7cGHnNbqTPyVJzFTkTnFikTCNbYTTNlC3Z6fV0QM=",
         "ref": "refs/heads/main",
-        "rev": "d36368b559405ca365ac239ff5792d31ea39b49b",
-        "revCount": 9,
+        "rev": "c939d91212ae227f62901a794560f282d4b78c28",
+        "revCount": 10,
         "type": "git",
         "url": "file:./kyler?submodules=1"
       },
